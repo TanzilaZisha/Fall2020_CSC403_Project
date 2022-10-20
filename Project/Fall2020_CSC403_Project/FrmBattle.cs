@@ -72,12 +72,12 @@ namespace Fall2020_CSC403_Project {
       UpdateHealthBars();
       if (player.Health <= 0 || enemy.Health <= 0) {
         instance = null;
-        Close();
+                this.Close();
       }
     }
 
     private void EnemyDamage(int amount) {
-      enemy.AlterHealth(amount);
+      enemy.AlterHealth(amount); 
     }
 
     private void PlayerDamage(int amount) {
@@ -88,5 +88,10 @@ namespace Fall2020_CSC403_Project {
       picBossBattle.Visible = false;
       tmrFinalBattle.Enabled = false;
     }
-  }
+
+        private void FrmBattle_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
