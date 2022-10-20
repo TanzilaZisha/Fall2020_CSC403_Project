@@ -27,7 +27,11 @@ namespace Fall2020_CSC403_Project.code {
     public void MoveBack() {
       Position = LastPosition;
     }
-
+   
+    public void RemoveCharacter()
+     {
+        this.MoveSpeed = new Vector2(-1000, -1000);
+     }
     public void GoLeft() {
       MoveSpeed = new Vector2(-GO_INC, 0);
     }

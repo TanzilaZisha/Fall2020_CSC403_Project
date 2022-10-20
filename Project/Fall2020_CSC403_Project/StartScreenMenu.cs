@@ -24,12 +24,12 @@ namespace Fall2020_CSC403_Project
 
         private void Settings_Click(object sender, EventArgs e)
         {
-
+            new Settings().Show();
         }
 
         private void StartGame_Click(object sender, EventArgs e)
         {
-            new FrmLevel().Show();
+             new FrmLevel().Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -40,6 +40,11 @@ namespace Fall2020_CSC403_Project
         private void LevelSelect_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
     }
 }
