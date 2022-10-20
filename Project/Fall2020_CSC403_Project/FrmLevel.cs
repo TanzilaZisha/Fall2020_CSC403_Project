@@ -143,7 +143,8 @@ namespace Fall2020_CSC403_Project {
 
     }
 
-        private void picPlayer_Click(object sender, EventArgs e)
+
+        private void picPlayer_click(object sender, EventArgs e)
         {
             player.GoUp();
             if (HitAWall(player))
@@ -151,5 +152,6 @@ namespace Fall2020_CSC403_Project {
                 player.GoDown();
             }
         }
+
     }
 }
