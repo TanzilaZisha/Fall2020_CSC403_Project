@@ -275,7 +275,6 @@
             this.picWall11.Size = new System.Drawing.Size(164, 232);
             this.picWall11.TabIndex = 17;
             this.picWall11.TabStop = false;
-
             // 
             // FrmLevel
             // 
