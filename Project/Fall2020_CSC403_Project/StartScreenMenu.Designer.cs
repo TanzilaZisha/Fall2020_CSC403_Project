@@ -34,6 +34,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -102,9 +103,22 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(192, 40);
             this.button4.TabIndex = 5;
-            this.button4.Text = "Select Level";
+            this.button4.Text = "Select Difficulty";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.LevelSelect_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button5.ForeColor = System.Drawing.Color.Navy;
+            this.button5.Location = new System.Drawing.Point(427, 299);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(192, 40);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "Exit";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.Exit_Click);
             // 
             // StartScreenMenu
             // 
@@ -114,6 +128,7 @@
             this.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.Start_BG;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1066, 450);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -139,5 +154,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
