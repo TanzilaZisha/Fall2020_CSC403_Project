@@ -35,10 +35,13 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.btnlevel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Location = new System.Drawing.Point(0, 24);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
@@ -48,6 +51,8 @@
             // 
             // menuStrip2
             // 
+            this.menuStrip2.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
@@ -72,7 +77,7 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button2.ForeColor = System.Drawing.Color.Navy;
-            this.button2.Location = new System.Drawing.Point(427, 211);
+            this.button2.Location = new System.Drawing.Point(427, 270);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(192, 40);
@@ -85,7 +90,7 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button3.ForeColor = System.Drawing.Color.Navy;
-            this.button3.Location = new System.Drawing.Point(427, 255);
+            this.button3.Location = new System.Drawing.Point(427, 314);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(192, 40);
@@ -111,7 +116,7 @@
             // 
             this.button5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button5.ForeColor = System.Drawing.Color.Navy;
-            this.button5.Location = new System.Drawing.Point(427, 299);
+            this.button5.Location = new System.Drawing.Point(427, 358);
             this.button5.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(192, 40);
@@ -120,14 +125,29 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.Exit_Click);
             // 
+            // btnlevel
+            // 
+            this.btnlevel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnlevel.ForeColor = System.Drawing.Color.Navy;
+            this.btnlevel.Location = new System.Drawing.Point(427, 211);
+            this.btnlevel.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnlevel.Name = "btnlevel";
+            this.btnlevel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnlevel.Size = new System.Drawing.Size(192, 40);
+            this.btnlevel.TabIndex = 7;
+            this.btnlevel.Text = "LEVEL";
+            this.btnlevel.UseVisualStyleBackColor = false;
+            this.btnlevel.Click += new System.EventHandler(this.btnlevel_Click);
+            // 
             // StartScreenMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.Start_BG;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1066, 450);
+            this.Controls.Add(this.btnlevel);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -155,5 +175,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnlevel;
     }
 }
