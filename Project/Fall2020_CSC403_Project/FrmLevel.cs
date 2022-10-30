@@ -147,7 +147,15 @@ namespace Fall2020_CSC403_Project {
           player.GoDown();
           break;
 
-        default:
+                case Keys.Escape:
+                    {
+                        /*this.Hide();*/
+                        ExitScreen exitScreen = new ExitScreen();
+                        exitScreen.Show();
+                    }
+                    break;
+
+                default:
           player.ResetMoveSpeed();
           break;
       }
