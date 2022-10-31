@@ -21,12 +21,18 @@ namespace Fall2020_CSC403_Project
 
         private void btnEasy_Click(object sender, EventArgs e)
         {
-            new FrmLevel().Show();
+            this.Hide();
+            FrmLevel fl = new FrmLevel();
+            fl.ShowDialog();
+            this.Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            new StartScreenMenu().Show();
+            this.Hide();
+            StartScreenMenu ss = new StartScreenMenu();
+            ss.ShowDialog();
+            this.Close();
         }
     }
 }
