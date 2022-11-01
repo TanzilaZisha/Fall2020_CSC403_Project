@@ -151,5 +151,8 @@
   <ItemGroup>
     <None Include="data\Start_BG.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="sound\music.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

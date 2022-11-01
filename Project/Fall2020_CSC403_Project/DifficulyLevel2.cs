@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,12 +17,16 @@ namespace Fall2020_CSC403_Project
         public DifficulyLevel2()
         {
             InitializeComponent();
-        }
+        } 
 
       
 
         private void btnEasy_Click(object sender, EventArgs e)
         {
+            string path = AppDomain.CurrentDomain.BaseDirectory.Replace("\\bin\\Debug\\", "") + "\\sound\\music.wav";
+
+            SoundPlayer simplesound = new SoundPlayer(path);
+            simplesound.Play();
             this.Hide();
             FrmLevel fl = new FrmLevel();
             fl.ShowDialog();

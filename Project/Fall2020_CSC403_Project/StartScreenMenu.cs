@@ -49,7 +49,10 @@ namespace Fall2020_CSC403_Project
 
         private void btnlevel_Click(object sender, EventArgs e)
         {
-            new DifficulyLevel2().Show();
+          this.Hide();
+         DifficulyLevel2 d= new DifficulyLevel2();
+            d.ShowDialog();
+            this.Close();
         }
     }
 }
