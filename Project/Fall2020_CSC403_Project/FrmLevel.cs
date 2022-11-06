@@ -1,6 +1,8 @@
 ﻿using Fall2020_CSC403_Project.code;
 using System;
 using System.Drawing;
+using System.Media;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace Fall2020_CSC403_Project {
@@ -14,8 +16,12 @@ namespace Fall2020_CSC403_Project {
 
     private DateTime timeBegin;
     private FrmBattle frmBattle;
+        System.Timers.Timer timer;
+        int h, m, s;
+        SoundPlayer simplesound;
+        public string path = AppDomain.CurrentDomain.BaseDirectory.Replace("\\bin\\Debug\\", "") + "\\sound\\music.wav";
 
-    public FrmLevel() {
+        public FrmLevel() {
       InitializeComponent();
     }
 
@@ -43,10 +49,34 @@ namespace Fall2020_CSC403_Project {
       }
 
       Game.player = player;
-      timeBegin = DateTime.Now;
-    }
+            simplesound = new SoundPlayer(path);
+            simplesound.Play();
 
-    private Vector2 CreatePosition(PictureBox pic) {
+            timeBegin = DateTime.Now;
+            timer = new System.Timers.Timer(60.666);
+            timer.Interval = 1000;//1s
+            timer.Elapsed += onTimeEvent;
+            timer.Start();
+        }
+        public void onTimeEvent(object sender, ElapsedEventArgs e)
+        {
+            Invoke(new Action(() =>
+            {
+                s += 1;
+                if (s == 60)
+                {
+                    s = 0;
+                    m += 1;
+                }
+                if (m == 60)
+                {
+                    m = 0;
+                    h += 1;
+                }
+                lblInGameTime.Text = String.Format("{0}:{1}:{2}", h.ToString().PadLeft(2, '0'), m.ToString().PadLeft(2, '0'), s.ToString().PadLeft(2, '0'));
+            }));
+        }
+        private Vector2 CreatePosition(PictureBox pic) {
       return new Vector2(pic.Location.X, pic.Location.Y);
     }
 
@@ -60,9 +90,9 @@ namespace Fall2020_CSC403_Project {
     }
 
     private void tmrUpdateInGameTime_Tick(object sender, EventArgs e) {
-      TimeSpan span = DateTime.Now - timeBegin;
-      string time = span.ToString(@"hh\:mm\:ss");
-      lblInGameTime.Text = "Time: " + time.ToString();
+      //TimeSpan span = DateTime.Now - timeBegin;
+      //string time = span.ToString(@"hh\:mm\:ss");
+      //lblInGameTime.Text = "Time: " + time.ToString();
     }
 
     private void tmrPlayerMove_Tick(object sender, EventArgs e) {
@@ -161,7 +191,25 @@ namespace Fall2020_CSC403_Project {
       }
     }
 
-    private void lblInGameTime_Click(object sender, EventArgs e) {
+        private void FrmLevel_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            simplesound.Stop();
+            timer.Stop();
+        }
+
+        private void lblPause_Click(object sender, EventArgs e)
+        {
+            simplesound.Stop();
+            timer.Stop();
+        }
+
+        private void lblStart_Click(object sender, EventArgs e)
+        {
+            simplesound.Play();
+            timer.Start();
+        }
+
+        private void lblInGameTime_Click(object sender, EventArgs e) {
 
     }
 

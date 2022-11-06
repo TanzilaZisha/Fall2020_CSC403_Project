@@ -23,10 +23,7 @@ namespace Fall2020_CSC403_Project
 
         private void btnEasy_Click(object sender, EventArgs e)
         {
-            string path = AppDomain.CurrentDomain.BaseDirectory.Replace("\\bin\\Debug\\", "") + "\\sound\\music.wav";
-
-            SoundPlayer simplesound = new SoundPlayer(path);
-            simplesound.Play();
+            
             this.Hide();
             FrmLevel fl = new FrmLevel();
             fl.ShowDialog();
