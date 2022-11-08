@@ -37,5 +37,22 @@ namespace Fall2020_CSC403_Project
             ss.ShowDialog();
             this.Close();
         }
+
+        private void btnMedium_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            FrmLevelMedium fl = new FrmLevelMedium();
+            fl.ShowDialog();
+            this.Close();
+        }
+
+        private void btnHard_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmLevelDifficult fl = new FrmLevelDifficult();
+            fl.ShowDialog();
+            this.Close();
+        }
     }
 }

@@ -70,6 +70,18 @@
     <Compile Include="FrmLevel.Designer.cs">
       <DependentUpon>FrmLevel.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmLevelDifficult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLevelDifficult.Designer.cs">
+      <DependentUpon>FrmLevelDifficult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLevelMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLevelMedium.Designer.cs">
+      <DependentUpon>FrmLevelMedium.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StartScreenMenu.cs">
@@ -89,6 +101,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLevel.resx">
       <DependentUpon>FrmLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLevelDifficult.resx">
+      <DependentUpon>FrmLevelDifficult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLevelMedium.resx">
+      <DependentUpon>FrmLevelMedium.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
