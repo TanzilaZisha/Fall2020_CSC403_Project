@@ -183,6 +183,8 @@
     <None Include="Resources\player2.bmp" />
     <None Include="Resources\player3.png" />
     <None Include="Resources\sonic-png-20657.png" />
+    <None Include="Resources\heart.png" />
+    <Content Include="Icon1.ico" />
     <Content Include="sound\music.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
