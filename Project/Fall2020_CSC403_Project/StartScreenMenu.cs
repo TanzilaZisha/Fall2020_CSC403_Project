@@ -24,12 +24,13 @@ namespace Fall2020_CSC403_Project
 
         private void Settings_Click(object sender, EventArgs e)
         {
-            //new Settings().Show();
+            new PlayerSelect().Show();
         }
 
         private void StartGame_Click(object sender, EventArgs e)
         {
-             new FrmLevel().Show();
+            new PlayerSelect().Show();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
