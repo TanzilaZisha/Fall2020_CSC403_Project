@@ -45,6 +45,11 @@ namespace Fall2020_CSC403_Project.code {
       MoveSpeed = new Vector2(0, +GO_INC);
     }
 
+    public void SpeedChange()
+        {
+            MoveSpeed = new Vector2(+GO_INC + 2, 0);
+        }
+
     public void ResetMoveSpeed() {
       MoveSpeed = new Vector2(0, 0);
     }

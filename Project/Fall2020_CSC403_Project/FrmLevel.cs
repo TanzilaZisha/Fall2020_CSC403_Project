@@ -11,6 +11,7 @@ namespace Fall2020_CSC403_Project {
     private Enemy enemyPoisonPacket;
     private Enemy bossKoolaid;
     private Enemy enemyCheeto;
+    private Player vehicle;
     private Character[] walls;
 
     private DateTime timeBegin;
@@ -32,6 +33,7 @@ namespace Fall2020_CSC403_Project {
       bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
       enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
       enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING));
+      vehicle = new Player(CreatePosition(picVehicle), CreateCollider(picVehicle, PADDING));
 
       bossKoolaid.Img = picBossKoolAid.BackgroundImage;
       enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
@@ -102,6 +104,10 @@ namespace Fall2020_CSC403_Project {
       if (HitAWall(player)) {
         player.MoveBack();
       }
+      if(HitAChar(player, vehicle))
+      {
+                player.SpeedChange();
+      }
 
       // check collision with enemies
       if (HitAChar(player, enemyPoisonPacket) && enemyPoisonPacket.Health > 0) {
@@ -147,6 +153,9 @@ namespace Fall2020_CSC403_Project {
       return you.Collider.Intersects(other.Collider);
     }
 
+    private void ChangeSpeed(Character you, Character car){
+          you.SpeedChange();
+    }
     private void Fight(Enemy enemy) {
       player.ResetMoveSpeed();
       player.MoveBack();
@@ -206,6 +215,11 @@ namespace Fall2020_CSC403_Project {
         {
             simplesound.Play();
             timer.Start();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void lblInGameTime_Click(object sender, EventArgs e) {

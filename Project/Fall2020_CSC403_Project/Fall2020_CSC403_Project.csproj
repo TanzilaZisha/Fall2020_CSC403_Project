@@ -178,6 +178,7 @@
     <None Include="data\Start_BG.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="data\vehicle_cab.jpg" />
     <Content Include="data\player3.png" />
     <None Include="Resources\player2.bmp" />
     <None Include="Resources\player3.png" />
