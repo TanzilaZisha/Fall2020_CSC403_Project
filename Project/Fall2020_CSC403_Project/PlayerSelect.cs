@@ -45,7 +45,11 @@ namespace Fall2020_CSC403_Project
 
         private void picPlayer_Click(object sender, EventArgs e)
         {
-            new FrmLevel().Show();
+            FrmLevel stage_1 = new FrmLevel();
+
+            stage_1.picPlayer.Image = picPlayer1.Image;
+
+            stage_1.Show();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -70,7 +74,11 @@ namespace Fall2020_CSC403_Project
 
         private void pictureBox1_Click_3(object sender, EventArgs e)
         {
-            new FrmLevel().Show();
+            FrmLevel stage_1 = new FrmLevel();
+
+            stage_1.picPlayer.Image = picPlayer2.Image;
+
+            stage_1.Show();
 
         }
     }
