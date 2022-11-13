@@ -47,7 +47,7 @@ namespace Fall2020_CSC403_Project
         {
             FrmLevel stage_1 = new FrmLevel();
 
-            stage_1.picPlayer.Image = picPlayer1.Image;
+            stage_1.picPlayer.Image = PbNut.Image;
 
             stage_1.Show();
         }
@@ -56,7 +56,7 @@ namespace Fall2020_CSC403_Project
         {
             FrmLevel stage_1 = new FrmLevel();
 
-            stage_1.picPlayer.Image = picPlayer3.Image;
+            stage_1.picPlayer.Image = PbKid.Image;      
 
             stage_1.Show();
         }
@@ -76,7 +76,7 @@ namespace Fall2020_CSC403_Project
         {
             FrmLevel stage_1 = new FrmLevel();
 
-            stage_1.picPlayer.Image = picPlayer2.Image;
+            stage_1.picPlayer.Image = PbSonic.Image;
 
             stage_1.Show();
 

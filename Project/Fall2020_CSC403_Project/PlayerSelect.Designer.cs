@@ -33,12 +33,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.picPlayer3 = new System.Windows.Forms.PictureBox();
-            this.picPlayer1 = new System.Windows.Forms.PictureBox();
-            this.picPlayer2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.picPlayer3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPlayer1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPlayer2)).BeginInit();
+            this.PbKid = new System.Windows.Forms.PictureBox();
+            this.PbNut = new System.Windows.Forms.PictureBox();
+            this.PbSonic = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PbKid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbNut)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbSonic)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -83,65 +83,65 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Mr. Peanut";
             // 
-            // picPlayer3
+            // PbKid
             // 
-            this.picPlayer3.BackColor = System.Drawing.Color.Transparent;
-            this.picPlayer3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picPlayer3.BackgroundImage")));
-            this.picPlayer3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picPlayer3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picPlayer3.Location = new System.Drawing.Point(882, 367);
-            this.picPlayer3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.picPlayer3.Name = "picPlayer3";
-            this.picPlayer3.Size = new System.Drawing.Size(127, 167);
-            this.picPlayer3.TabIndex = 6;
-            this.picPlayer3.TabStop = false;
-            this.picPlayer3.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.PbKid.BackColor = System.Drawing.Color.Transparent;
+            this.PbKid.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PbKid.BackgroundImage")));
+            this.PbKid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PbKid.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PbKid.Location = new System.Drawing.Point(882, 367);
+            this.PbKid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PbKid.Name = "PbKid";
+            this.PbKid.Size = new System.Drawing.Size(127, 167);
+            this.PbKid.TabIndex = 6;
+            this.PbKid.TabStop = false;
+            this.PbKid.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // picPlayer1
+            // PbNut
             // 
-            this.picPlayer1.BackColor = System.Drawing.Color.Transparent;
-            this.picPlayer1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.player;
-            this.picPlayer1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picPlayer1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picPlayer1.Location = new System.Drawing.Point(204, 371);
-            this.picPlayer1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.picPlayer1.Name = "picPlayer1";
-            this.picPlayer1.Size = new System.Drawing.Size(81, 163);
-            this.picPlayer1.TabIndex = 4;
-            this.picPlayer1.TabStop = false;
-            this.picPlayer1.Click += new System.EventHandler(this.picPlayer_Click);
+            this.PbNut.BackColor = System.Drawing.Color.Transparent;
+            this.PbNut.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.player;
+            this.PbNut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PbNut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PbNut.Location = new System.Drawing.Point(204, 371);
+            this.PbNut.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PbNut.Name = "PbNut";
+            this.PbNut.Size = new System.Drawing.Size(81, 163);
+            this.PbNut.TabIndex = 4;
+            this.PbNut.TabStop = false;
+            this.PbNut.Click += new System.EventHandler(this.picPlayer_Click);
             // 
-            // picPlayer2
+            // PbSonic
             // 
-            this.picPlayer2.BackColor = System.Drawing.Color.Transparent;
-            this.picPlayer2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picPlayer2.BackgroundImage")));
-            this.picPlayer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picPlayer2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picPlayer2.Location = new System.Drawing.Point(567, 367);
-            this.picPlayer2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.picPlayer2.Name = "picPlayer2";
-            this.picPlayer2.Size = new System.Drawing.Size(127, 167);
-            this.picPlayer2.TabIndex = 11;
-            this.picPlayer2.TabStop = false;
-            this.picPlayer2.Click += new System.EventHandler(this.pictureBox1_Click_3);
+            this.PbSonic.BackColor = System.Drawing.Color.Transparent;
+            this.PbSonic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PbSonic.BackgroundImage")));
+            this.PbSonic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PbSonic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PbSonic.Location = new System.Drawing.Point(547, 368);
+            this.PbSonic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PbSonic.Name = "PbSonic";
+            this.PbSonic.Size = new System.Drawing.Size(127, 167);
+            this.PbSonic.TabIndex = 11;
+            this.PbSonic.TabStop = false;
+            this.PbSonic.Click += new System.EventHandler(this.pictureBox1_Click_3);
             // 
             // PlayerSelect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1254, 896);
-            this.Controls.Add(this.picPlayer2);
+            this.Controls.Add(this.PbSonic);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.picPlayer3);
-            this.Controls.Add(this.picPlayer1);
+            this.Controls.Add(this.PbKid);
+            this.Controls.Add(this.PbNut);
             this.Controls.Add(this.label1);
             this.Name = "PlayerSelect";
             this.Text = "PlayerSelect";
-            ((System.ComponentModel.ISupportInitialize)(this.picPlayer3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPlayer1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPlayer2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbKid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbNut)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbSonic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,10 +151,10 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox picPlayer3;
+        private System.Windows.Forms.PictureBox PbKid;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox picPlayer1;
-        private System.Windows.Forms.PictureBox picPlayer2;
+        private System.Windows.Forms.PictureBox PbNut;
+        public System.Windows.Forms.PictureBox PbSonic;
     }
 }
