@@ -54,5 +54,10 @@ namespace Fall2020_CSC403_Project
             fl.ShowDialog();
             this.Close();
         }
+
+        private void DifficulyLevel2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

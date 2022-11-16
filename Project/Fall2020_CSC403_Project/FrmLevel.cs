@@ -20,7 +20,7 @@ namespace Fall2020_CSC403_Project {
         int h, m, s;
         SoundPlayer simplesound;
         public string path = AppDomain.CurrentDomain.BaseDirectory.Replace("\\bin\\Debug\\", "") + "\\sound\\music.wav";
-
+        private bool puse = false;
         public FrmLevel() {
       InitializeComponent();
     }
@@ -168,35 +168,40 @@ namespace Fall2020_CSC403_Project {
     }
 
     private void FrmLevel_KeyDown(object sender, KeyEventArgs e) {
-      switch (e.KeyCode) {
-        case Keys.Left:
-          player.GoLeft();
-          break;
+            if (!puse)
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.Left:
+                        player.GoLeft();
+                        break;
 
-        case Keys.Right:
-          player.GoRight();
-          break;
+                    case Keys.Right:
+                        player.GoRight();
+                        break;
 
-        case Keys.Up:
-          player.GoUp();
-          break;
+                    case Keys.Up:
+                        player.GoUp();
+                        break;
 
-        case Keys.Down:
-          player.GoDown();
-          break;
+                    case Keys.Down:
+                        player.GoDown();
+                        break;
 
-                case Keys.Escape:
-                    {
-                        /*this.Hide();*/
-                        ExitScreen exitScreen = new ExitScreen();
-                        exitScreen.Show();
-                    }
-                    break;
+                    case Keys.Escape:
+                        {
+                            /*this.Hide();*/
+                            ExitScreen exitScreen = new ExitScreen();
+                            exitScreen.Show();
+                        }
+                        break;
 
-                default:
-          player.ResetMoveSpeed();
-          break;
-      }
+                    default:
+                        player.ResetMoveSpeed();
+                        break;
+                }
+            }
+      
     }
 
         private void FrmLevel_FormClosing(object sender, FormClosingEventArgs e)
@@ -207,12 +212,14 @@ namespace Fall2020_CSC403_Project {
 
         private void lblPause_Click(object sender, EventArgs e)
         {
+            puse = true;
             simplesound.Stop();
             timer.Stop();
         }
 
         private void lblStart_Click(object sender, EventArgs e)
         {
+            puse = false;
             simplesound.Play();
             timer.Start();
         }
