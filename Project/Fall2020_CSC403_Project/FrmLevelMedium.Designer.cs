@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLevel));
             this.lblInGameTime = new System.Windows.Forms.Label();
             this.tmrUpdateInGameTime = new System.Windows.Forms.Timer(this.components);
             this.tmrPlayerMove = new System.Windows.Forms.Timer(this.components);
@@ -135,7 +134,6 @@
             // picBossKoolAid
             // 
             this.picBossKoolAid.BackColor = System.Drawing.Color.Transparent;
-            this.picBossKoolAid.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBossKoolAid.BackgroundImage")));
             this.picBossKoolAid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picBossKoolAid.Location = new System.Drawing.Point(1456, 114);
             this.picBossKoolAid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -325,7 +323,7 @@
             this.lblStart.Text = "Restart";
             this.lblStart.Click += new System.EventHandler(this.lblStart_Click);
             // 
-            // FrmLevel
+            // FrmLevelMedium
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -354,7 +352,7 @@
             this.Controls.Add(this.picPlayer);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "FrmLevel";
+            this.Name = "FrmLevelMedium";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Explore";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmLevel_FormClosing);
@@ -384,8 +382,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox picPlayer;
         private System.Windows.Forms.PictureBox picBossKoolAid;
         private System.Windows.Forms.Label lblInGameTime;
         private System.Windows.Forms.Timer tmrUpdateInGameTime;
@@ -407,6 +403,7 @@
         private System.Windows.Forms.PictureBox picWall11;
         private System.Windows.Forms.Label lblPause;
         private System.Windows.Forms.Label lblStart;
+        public System.Windows.Forms.PictureBox picPlayer;
     }
 }
 

@@ -12,9 +12,12 @@ namespace Fall2020_CSC403_Project
 {
     public partial class StartScreenMenu : Form
     {
+
+
         public StartScreenMenu()
         {
             InitializeComponent();
+           
         }
 
         private void StartScreenMenu_Load(object sender, EventArgs e)
@@ -24,13 +27,19 @@ namespace Fall2020_CSC403_Project
 
         private void Settings_Click(object sender, EventArgs e)
         {
-            new PlayerSelect().Show();
+            new PlayerSelect(1).Show();
         }
 
         private void StartGame_Click(object sender, EventArgs e)
         {
-            new PlayerSelect().Show();
-            
+            //new PlayerSelect().Show();
+
+            this.Hide();
+            DifficulyLevel2 d = new DifficulyLevel2();
+            d.ShowDialog();
+            this.Close();
+
+
         }
 
         private void button3_Click(object sender, EventArgs e)

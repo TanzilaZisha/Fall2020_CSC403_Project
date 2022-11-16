@@ -230,6 +230,7 @@ namespace Fall2020_CSC403_Project {
         private void picPlayer_click(object sender, EventArgs e)
         {
             player.GoUp();
+         
             
         }
 

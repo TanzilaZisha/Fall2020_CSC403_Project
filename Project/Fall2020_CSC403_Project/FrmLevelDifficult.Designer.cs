@@ -382,8 +382,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox picPlayer;
         private System.Windows.Forms.PictureBox picBossKoolAid;
         private System.Windows.Forms.Label lblInGameTime;
         private System.Windows.Forms.Timer tmrUpdateInGameTime;
@@ -405,6 +403,7 @@
         private System.Windows.Forms.PictureBox picWall11;
         private System.Windows.Forms.Label lblPause;
         private System.Windows.Forms.Label lblStart;
+        public System.Windows.Forms.PictureBox picPlayer;
     }
 }
 

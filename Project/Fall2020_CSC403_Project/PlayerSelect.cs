@@ -13,9 +13,14 @@ namespace Fall2020_CSC403_Project
 {
     public partial class PlayerSelect : Form
     {
-        public PlayerSelect()
+
+        int lvl;
+
+
+        public PlayerSelect(int difficulty)
         {
             InitializeComponent();
+            lvl = difficulty;
         }
     
 
@@ -45,20 +50,50 @@ namespace Fall2020_CSC403_Project
 
         private void picPlayer_Click(object sender, EventArgs e)
         {
-            FrmLevel stage_1 = new FrmLevel();
+            
+            if(lvl == 1)
+            {
+                FrmLevel stage_1 = new FrmLevel();
+                stage_1.picPlayer.BackgroundImage = PbNut.BackgroundImage;
+                stage_1.Show();
+            }
+            else if (lvl == 2)
+            {
+                FrmLevelMedium stage_2 = new FrmLevelMedium();
+                stage_2.picPlayer.BackgroundImage = PbNut.BackgroundImage;
+                stage_2.Show();
+            }
+            else if (lvl == 3)
+                {
+                    FrmLevelDifficult stage_3 = new FrmLevelDifficult();
+                    stage_3.picPlayer.BackgroundImage = PbNut.BackgroundImage;
+                    stage_3.Show();
+                }
 
-            stage_1.picPlayer.Image = PbNut.Image;
 
-            stage_1.Show();
+
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            FrmLevel stage_1 = new FrmLevel();
-
-            stage_1.picPlayer.Image = PbKid.Image;      
-
-            stage_1.Show();
+            if (lvl == 1)
+            {
+                FrmLevel stage_1 = new FrmLevel();
+                stage_1.picPlayer.BackgroundImage = PbKid.BackgroundImage;
+                stage_1.Show();
+            }
+            else if (lvl == 2)
+            {
+                FrmLevelMedium stage_2 = new FrmLevelMedium();
+                stage_2.picPlayer.BackgroundImage = PbKid.BackgroundImage;
+                stage_2.Show();
+            }
+            else if (lvl == 3)
+            {
+                FrmLevelDifficult stage_3 = new FrmLevelDifficult();
+                stage_3.picPlayer.BackgroundImage = PbKid.BackgroundImage;
+                stage_3.Show();
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -74,11 +109,24 @@ namespace Fall2020_CSC403_Project
 
         private void pictureBox1_Click_3(object sender, EventArgs e)
         {
-            FrmLevel stage_1 = new FrmLevel();
-
-            stage_1.picPlayer.Image = PbSonic.Image;
-
-            stage_1.Show();
+            if (lvl == 1)
+            {
+                FrmLevel stage_1 = new FrmLevel();
+                stage_1.picPlayer.BackgroundImage = PbSonic.BackgroundImage;
+                stage_1.Show();
+            }
+            else if (lvl == 2)
+            {
+                FrmLevelMedium stage_2 = new FrmLevelMedium();
+                stage_2.picPlayer.BackgroundImage = PbSonic.BackgroundImage;
+                stage_2.Show();
+            }
+            else if (lvl == 3)
+            {
+                FrmLevelDifficult stage_3 = new FrmLevelDifficult();
+                stage_3.picPlayer.BackgroundImage = PbSonic.BackgroundImage;
+                stage_3.Show();
+            }
 
         }
     }

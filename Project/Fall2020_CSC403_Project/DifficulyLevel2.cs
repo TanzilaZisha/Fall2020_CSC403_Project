@@ -25,7 +25,8 @@ namespace Fall2020_CSC403_Project
         {
             
             this.Hide();
-            FrmLevel fl = new FrmLevel();
+
+            PlayerSelect fl = new PlayerSelect(1);
             fl.ShowDialog();
             this.Close();
         }
@@ -41,18 +42,30 @@ namespace Fall2020_CSC403_Project
         private void btnMedium_Click(object sender, EventArgs e)
         {
 
+            /*        this.Hide();
+                    FrmLevelMedium fl = new FrmLevelMedium();
+                    fl.ShowDialog();
+                    this.Close();*/
+
             this.Hide();
-            FrmLevelMedium fl = new FrmLevelMedium();
+            PlayerSelect fl = new PlayerSelect(2);
             fl.ShowDialog();
             this.Close();
+
+
         }
 
         private void btnHard_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmLevelDifficult fl = new FrmLevelDifficult();
+            /*   FrmLevelDifficult fl = new FrmLevelDifficult();
+               fl.ShowDialog();
+               this.Close();*/
+            PlayerSelect fl = new PlayerSelect(3);
             fl.ShowDialog();
             this.Close();
+
+
         }
     }
 }

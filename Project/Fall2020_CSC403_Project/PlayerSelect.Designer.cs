@@ -89,6 +89,7 @@
             this.PbKid.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PbKid.BackgroundImage")));
             this.PbKid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PbKid.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PbKid.Image = global::Fall2020_CSC403_Project.Properties.Resources.player3;
             this.PbKid.Location = new System.Drawing.Point(882, 367);
             this.PbKid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PbKid.Name = "PbKid";
