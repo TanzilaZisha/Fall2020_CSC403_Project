@@ -54,7 +54,7 @@ namespace Fall2020_CSC403_Project {
     private void UpdateHealthBars() {
       float playerHealthPer = player.Health / (float)player.MaxHealth;
       float enemyHealthPer = enemy.Health / (float)enemy.MaxHealth;
-
+        
       const int MAX_HEALTHBAR_WIDTH = 226;
       lblPlayerHealthFull.Width = (int)(MAX_HEALTHBAR_WIDTH * playerHealthPer);
       lblEnemyHealthFull.Width = (int)(MAX_HEALTHBAR_WIDTH * enemyHealthPer);
@@ -67,6 +67,7 @@ namespace Fall2020_CSC403_Project {
       player.OnAttack(-4);
       if (enemy.Health > 0) {
         enemy.OnAttack(-2);
+              
       }
 
       UpdateHealthBars();

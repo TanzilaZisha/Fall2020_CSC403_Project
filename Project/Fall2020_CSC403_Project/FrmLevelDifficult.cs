@@ -10,6 +10,7 @@ namespace Fall2020_CSC403_Project
     public partial class FrmLevelDifficult : Form
     {
         private Player player;
+        private Player healthkit;
 
         private Enemy enemyPoisonPacket;
         private Enemy bossKoolaid;
@@ -37,6 +38,8 @@ namespace Fall2020_CSC403_Project
             bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
             enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
             enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING));
+
+            healthkit = new Player(CreatePosition(PbHealth), CreateCollider(PbHealth, PADDING));
 
             bossKoolaid.Img = picBossKoolAid.BackgroundImage;
             enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
@@ -114,6 +117,19 @@ namespace Fall2020_CSC403_Project
             {
                 player.MoveBack();
             }
+
+
+
+
+            if (HitAChar(player, healthkit))
+
+            {
+                player.Maxhp();
+                PbHealth.Visible = false;
+
+            }
+
+
 
             // check collision with enemies
             if (HitAChar(player, enemyPoisonPacket) && enemyPoisonPacket.Health > 0)

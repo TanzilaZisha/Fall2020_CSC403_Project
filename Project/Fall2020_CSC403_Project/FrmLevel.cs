@@ -12,8 +12,9 @@ namespace Fall2020_CSC403_Project {
     private Enemy bossKoolaid;
     private Enemy enemyCheeto;
     private Player vehicle;
-    private Character[] walls;
+    private Player healthkit;
 
+        private Character[] walls;
     private DateTime timeBegin;
     private FrmBattle frmBattle;
         System.Timers.Timer timer;
@@ -34,8 +35,9 @@ namespace Fall2020_CSC403_Project {
       enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
       enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING));
       vehicle = new Player(CreatePosition(picVehicle), CreateCollider(picVehicle, PADDING));
+      healthkit = new Player (CreatePosition(PbHealth), CreateCollider(PbHealth, PADDING));
 
-      bossKoolaid.Img = picBossKoolAid.BackgroundImage;
+            bossKoolaid.Img = picBossKoolAid.BackgroundImage;
       enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
       enemyCheeto.Img = picEnemyCheeto.BackgroundImage;
 
@@ -109,6 +111,16 @@ namespace Fall2020_CSC403_Project {
                 player.SpeedChange();
       }
 
+
+            if (HitAChar(player, healthkit))
+
+            {
+                player.Maxhp();
+                PbHealth.Visible = false;
+
+            }
+
+
       // check collision with enemies
       if (HitAChar(player, enemyPoisonPacket) && enemyPoisonPacket.Health > 0) {
         Fight(enemyPoisonPacket);
@@ -131,7 +143,10 @@ namespace Fall2020_CSC403_Project {
                 picBossKoolAid.Visible = false;
        }
       if(player.Health <= 0) {
+
+              
                 picPlayer.Visible = false;
+
        }
 
        else  // update player's picture box
@@ -225,6 +240,11 @@ namespace Fall2020_CSC403_Project {
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picEnemyPoisonPacket_Click(object sender, EventArgs e)
         {
 
         }
