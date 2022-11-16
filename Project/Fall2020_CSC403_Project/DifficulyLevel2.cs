@@ -67,5 +67,10 @@ namespace Fall2020_CSC403_Project
 
 
         }
+
+        private void DifficulyLevel2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
