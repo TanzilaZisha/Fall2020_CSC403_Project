@@ -52,6 +52,9 @@
             this.lblPause = new System.Windows.Forms.Label();
             this.lblStart = new System.Windows.Forms.Label();
             this.PbHealth = new System.Windows.Forms.PictureBox();
+            this.picEnemyCheeto1 = new System.Windows.Forms.PictureBox();
+            this.picEnemyCheeto2 = new System.Windows.Forms.PictureBox();
+            this.PbHealthKit2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyCheeto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyPoisonPacket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall3)).BeginInit();
@@ -70,6 +73,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbHealth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEnemyCheeto1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEnemyCheeto2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbHealthKit2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInGameTime
@@ -337,6 +343,41 @@
             this.PbHealth.TabIndex = 25;
             this.PbHealth.TabStop = false;
             // 
+            // picEnemyCheeto1
+            // 
+            this.picEnemyCheeto1.BackColor = System.Drawing.Color.Transparent;
+            this.picEnemyCheeto1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.enemy_cheetos;
+            this.picEnemyCheeto1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picEnemyCheeto1.Location = new System.Drawing.Point(873, 247);
+            this.picEnemyCheeto1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.picEnemyCheeto1.Name = "picEnemyCheeto1";
+            this.picEnemyCheeto1.Size = new System.Drawing.Size(96, 165);
+            this.picEnemyCheeto1.TabIndex = 26;
+            this.picEnemyCheeto1.TabStop = false;
+            // 
+            // picEnemyCheeto2
+            // 
+            this.picEnemyCheeto2.BackColor = System.Drawing.Color.Transparent;
+            this.picEnemyCheeto2.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.enemy_cheetos;
+            this.picEnemyCheeto2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picEnemyCheeto2.Location = new System.Drawing.Point(1335, 434);
+            this.picEnemyCheeto2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.picEnemyCheeto2.Name = "picEnemyCheeto2";
+            this.picEnemyCheeto2.Size = new System.Drawing.Size(96, 165);
+            this.picEnemyCheeto2.TabIndex = 27;
+            this.picEnemyCheeto2.TabStop = false;
+            // 
+            // PbHealthKit2
+            // 
+            this.PbHealthKit2.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.health;
+            this.PbHealthKit2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PbHealthKit2.Location = new System.Drawing.Point(885, 151);
+            this.PbHealthKit2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PbHealthKit2.Name = "PbHealthKit2";
+            this.PbHealthKit2.Size = new System.Drawing.Size(73, 68);
+            this.PbHealthKit2.TabIndex = 28;
+            this.PbHealthKit2.TabStop = false;
+            // 
             // FrmLevelDifficult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -344,6 +385,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1764, 1117);
+            this.Controls.Add(this.PbHealthKit2);
+            this.Controls.Add(this.picEnemyCheeto2);
+            this.Controls.Add(this.picEnemyCheeto1);
             this.Controls.Add(this.PbHealth);
             this.Controls.Add(this.picBossKoolAid);
             this.Controls.Add(this.lblStart);
@@ -392,6 +436,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbHealth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEnemyCheeto1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEnemyCheeto2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbHealthKit2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -421,6 +468,9 @@
         private System.Windows.Forms.Label lblStart;
         public System.Windows.Forms.PictureBox picPlayer;
         private System.Windows.Forms.PictureBox PbHealth;
+        private System.Windows.Forms.PictureBox picEnemyCheeto1;
+        private System.Windows.Forms.PictureBox picEnemyCheeto2;
+        private System.Windows.Forms.PictureBox PbHealthKit2;
     }
 }
 

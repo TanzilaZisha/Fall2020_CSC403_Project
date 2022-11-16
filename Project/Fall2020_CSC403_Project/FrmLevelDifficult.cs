@@ -11,10 +11,13 @@ namespace Fall2020_CSC403_Project
     {
         private Player player;
         private Player healthkit;
+        private Player healthkit2;
 
         private Enemy enemyPoisonPacket;
         private Enemy bossKoolaid;
         private Enemy enemyCheeto;
+        private Enemy enemyCheeto1;
+        private Enemy enemyCheeto2;
         private Character[] walls;
 
         private DateTime timeBegin;
@@ -38,16 +41,22 @@ namespace Fall2020_CSC403_Project
             bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
             enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
             enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING));
-
+            enemyCheeto1 = new Enemy(CreatePosition(picEnemyCheeto1), CreateCollider(picEnemyCheeto1, PADDING));
+            enemyCheeto2 = new Enemy(CreatePosition(picEnemyCheeto2), CreateCollider(picEnemyCheeto2, PADDING));
             healthkit = new Player(CreatePosition(PbHealth), CreateCollider(PbHealth, PADDING));
+            healthkit2 = new Player(CreatePosition(PbHealthKit2), CreateCollider(PbHealthKit2, PADDING));
 
             bossKoolaid.Img = picBossKoolAid.BackgroundImage;
             enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
             enemyCheeto.Img = picEnemyCheeto.BackgroundImage;
+            enemyCheeto1.Img = picEnemyCheeto1.BackgroundImage;
+            enemyCheeto2.Img = picEnemyCheeto2.BackgroundImage;
 
             bossKoolaid.Color = Color.Red;
             enemyPoisonPacket.Color = Color.Green;
             enemyCheeto.Color = Color.FromArgb(255, 245, 161);
+            enemyCheeto1.Color = Color.FromArgb(255, 245, 161);
+            enemyCheeto2.Color = Color.FromArgb(255, 245, 161);
 
             walls = new Character[NUM_WALLS];
             for (int w = 0; w < NUM_WALLS; w++)
@@ -129,6 +138,14 @@ namespace Fall2020_CSC403_Project
 
             }
 
+            if (HitAChar(player, healthkit2))
+
+            {
+                player.Maxhp();
+                PbHealthKit2.Visible = false;
+
+            }
+
 
 
             // check collision with enemies
@@ -139,6 +156,14 @@ namespace Fall2020_CSC403_Project
             else if (HitAChar(player, enemyCheeto) && enemyCheeto.Health > 0)
             {
                 Fight(enemyCheeto);
+            }
+            else if (HitAChar(player, enemyCheeto1) && enemyCheeto1.Health > 0)
+            {
+                Fight(enemyCheeto1);
+            }
+            else if (HitAChar(player, enemyCheeto2) && enemyCheeto2.Health > 0)
+            {
+                Fight(enemyCheeto2);
             }
             if (HitAChar(player, bossKoolaid) && bossKoolaid.Health > 0)
             {
@@ -153,6 +178,14 @@ namespace Fall2020_CSC403_Project
             if (enemyCheeto.Health <= 0)
             {
                 picEnemyCheeto.Visible = false;
+            }
+            if (enemyCheeto1.Health <= 0)
+            {
+                picEnemyCheeto1.Visible = false;
+            }
+            if (enemyCheeto2.Health <= 0)
+            {
+                picEnemyCheeto2.Visible = false;
             }
             if (bossKoolaid.Health <= 0)
             {
