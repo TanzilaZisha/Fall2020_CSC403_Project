@@ -48,6 +48,7 @@
             this.lblPause = new System.Windows.Forms.Label();
             this.lblStart = new System.Windows.Forms.Label();
             this.picVehicle = new System.Windows.Forms.PictureBox();
+            this.PbHealth = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyCheeto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyPoisonPacket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall3)).BeginInit();
@@ -66,6 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVehicle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbHealth)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInGameTime
@@ -333,6 +335,17 @@
             this.picVehicle.TabStop = false;
             this.picVehicle.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
+            // PbHealth
+            // 
+            this.PbHealth.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.health;
+            this.PbHealth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PbHealth.Location = new System.Drawing.Point(938, 577);
+            this.PbHealth.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PbHealth.Name = "PbHealth";
+            this.PbHealth.Size = new System.Drawing.Size(73, 68);
+            this.PbHealth.TabIndex = 24;
+            this.PbHealth.TabStop = false;
+            // 
             // FrmLevel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -340,6 +353,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1764, 1055);
+            this.Controls.Add(this.PbHealth);
             this.Controls.Add(this.picVehicle);
             this.Controls.Add(this.lblStart);
             this.Controls.Add(this.lblPause);
@@ -388,6 +402,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVehicle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbHealth)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,6 +432,7 @@
         private System.Windows.Forms.Label lblStart;
         public System.Windows.Forms.PictureBox picPlayer;
         private System.Windows.Forms.PictureBox picVehicle;
+        private System.Windows.Forms.PictureBox PbHealth;
     }
 }
 
