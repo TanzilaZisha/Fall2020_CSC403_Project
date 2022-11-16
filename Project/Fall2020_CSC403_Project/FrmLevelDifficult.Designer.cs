@@ -136,6 +136,7 @@
             // picBossKoolAid
             // 
             this.picBossKoolAid.BackColor = System.Drawing.Color.Transparent;
+            this.picBossKoolAid.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.enemy_koolaid;
             this.picBossKoolAid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picBossKoolAid.Location = new System.Drawing.Point(1456, 114);
             this.picBossKoolAid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -329,7 +330,7 @@
             // 
             this.PbHealth.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.health;
             this.PbHealth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PbHealth.Location = new System.Drawing.Point(947, 499);
+            this.PbHealth.Location = new System.Drawing.Point(1538, 891);
             this.PbHealth.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PbHealth.Name = "PbHealth";
             this.PbHealth.Size = new System.Drawing.Size(73, 68);

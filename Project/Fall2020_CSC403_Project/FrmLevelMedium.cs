@@ -12,6 +12,7 @@ namespace Fall2020_CSC403_Project
         private Player player;
         private Player healthkit;
         private Enemy enemyPoisonPacket;
+        private Enemy enemyPoisonPacket1;
         private Enemy bossKoolaid;
         private Enemy enemyCheeto;
         private Character[] walls;
@@ -36,6 +37,7 @@ namespace Fall2020_CSC403_Project
             player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
             bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
             enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
+            enemyPoisonPacket1 = new Enemy(CreatePosition(picEnemyPoisonPacket1), CreateCollider(picEnemyPoisonPacket1, PADDING));
             enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING));
             healthkit = new Player(CreatePosition(PbHealth), CreateCollider(PbHealth, PADDING));
 
@@ -43,10 +45,12 @@ namespace Fall2020_CSC403_Project
 
             bossKoolaid.Img = picBossKoolAid.BackgroundImage;
             enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
+            enemyPoisonPacket1.Img = picEnemyPoisonPacket1.BackgroundImage;
             enemyCheeto.Img = picEnemyCheeto.BackgroundImage;
 
             bossKoolaid.Color = Color.Red;
             enemyPoisonPacket.Color = Color.Green;
+            enemyPoisonPacket1.Color = Color.Yellow;
             enemyCheeto.Color = Color.FromArgb(255, 245, 161);
 
             walls = new Character[NUM_WALLS];
@@ -133,6 +137,10 @@ namespace Fall2020_CSC403_Project
             {
                 Fight(enemyPoisonPacket);
             }
+            else if (HitAChar(player, enemyPoisonPacket1) && enemyPoisonPacket1.Health > 0)
+            {
+                Fight(enemyPoisonPacket1);
+            }
             else if (HitAChar(player, enemyCheeto) && enemyCheeto.Health > 0)
             {
                 Fight(enemyCheeto);
@@ -146,6 +154,10 @@ namespace Fall2020_CSC403_Project
             if (enemyPoisonPacket.Health <= 0)
             {
                 picEnemyPoisonPacket.Visible = false;
+            }
+            if (enemyPoisonPacket1.Health <= 0)
+            {
+                picEnemyPoisonPacket1.Visible = false;
             }
             if (enemyCheeto.Health <= 0)
             {

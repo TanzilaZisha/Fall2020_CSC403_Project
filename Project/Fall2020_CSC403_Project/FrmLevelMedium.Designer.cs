@@ -52,6 +52,7 @@
             this.lblPause = new System.Windows.Forms.Label();
             this.lblStart = new System.Windows.Forms.Label();
             this.PbHealth = new System.Windows.Forms.PictureBox();
+            this.picEnemyPoisonPacket1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyCheeto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyPoisonPacket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall3)).BeginInit();
@@ -70,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbHealth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEnemyPoisonPacket1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInGameTime
@@ -136,6 +138,7 @@
             // picBossKoolAid
             // 
             this.picBossKoolAid.BackColor = System.Drawing.Color.Transparent;
+            this.picBossKoolAid.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.enemy_koolaid;
             this.picBossKoolAid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picBossKoolAid.Location = new System.Drawing.Point(1456, 114);
             this.picBossKoolAid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -329,12 +332,24 @@
             // 
             this.PbHealth.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.health;
             this.PbHealth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PbHealth.Location = new System.Drawing.Point(908, 577);
+            this.PbHealth.Location = new System.Drawing.Point(779, 137);
             this.PbHealth.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PbHealth.Name = "PbHealth";
             this.PbHealth.Size = new System.Drawing.Size(73, 68);
             this.PbHealth.TabIndex = 25;
             this.PbHealth.TabStop = false;
+            // 
+            // picEnemyPoisonPacket1
+            // 
+            this.picEnemyPoisonPacket1.BackColor = System.Drawing.Color.Transparent;
+            this.picEnemyPoisonPacket1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.enemy_poisonpacket;
+            this.picEnemyPoisonPacket1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picEnemyPoisonPacket1.Location = new System.Drawing.Point(758, 238);
+            this.picEnemyPoisonPacket1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.picEnemyPoisonPacket1.Name = "picEnemyPoisonPacket1";
+            this.picEnemyPoisonPacket1.Size = new System.Drawing.Size(94, 148);
+            this.picEnemyPoisonPacket1.TabIndex = 26;
+            this.picEnemyPoisonPacket1.TabStop = false;
             // 
             // FrmLevelMedium
             // 
@@ -343,6 +358,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1764, 1117);
+            this.Controls.Add(this.picEnemyPoisonPacket1);
             this.Controls.Add(this.PbHealth);
             this.Controls.Add(this.lblStart);
             this.Controls.Add(this.lblPause);
@@ -391,6 +407,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbHealth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEnemyPoisonPacket1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -420,6 +437,7 @@
         private System.Windows.Forms.Label lblStart;
         public System.Windows.Forms.PictureBox picPlayer;
         private System.Windows.Forms.PictureBox PbHealth;
+        private System.Windows.Forms.PictureBox picEnemyPoisonPacket1;
     }
 }
 
