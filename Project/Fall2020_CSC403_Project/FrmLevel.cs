@@ -109,6 +109,7 @@ namespace Fall2020_CSC403_Project {
       if(HitAChar(player, vehicle))
       {
                 player.SpeedChange();
+                picVehicle.Visible = false;
       }
 
 
@@ -143,7 +144,6 @@ namespace Fall2020_CSC403_Project {
                 picBossKoolAid.Visible = false;
        }
       if(player.Health <= 0) {
-
               
                 picPlayer.Visible = false;
 
