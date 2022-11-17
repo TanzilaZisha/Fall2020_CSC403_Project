@@ -185,6 +185,7 @@
     <None Include="Resources\sonic-png-20657.png" />
     <None Include="Resources\heart.png" />
     <Content Include="Icon1.ico" />
+    <None Include="Resources\firewall.jpg" />
     <Content Include="sound\music.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

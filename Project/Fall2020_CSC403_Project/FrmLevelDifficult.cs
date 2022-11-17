@@ -124,6 +124,7 @@ namespace Fall2020_CSC403_Project
             // check collision with walls
             if (HitAWall(player))
             {
+                player.AlterHealth(-1);
                 player.MoveBack();
             }
 
@@ -291,6 +292,11 @@ namespace Fall2020_CSC403_Project
         }
 
         private void FrmLevel_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picWall6_Click(object sender, EventArgs e)
         {
 
         }
